@@ -10,8 +10,10 @@ export default function App() {
   // }
 
   function addTodo(event) {
-    console.log("add todo working");
+    //   console.log("add todo working");
+    event.preventDefault(); //this function will stop the refresh
     setTodos([...todos, input]);
+    setInput("");
   }
 
   return (
@@ -24,7 +26,9 @@ export default function App() {
           onChange={(event) => setInput(event.target.value)}
           value={input}
         />
-        <button onClick={addTodo}>Add Task</button>
+        <button type="submit" onClick={addTodo}>
+          Add Task
+        </button>
       </form>
       <ul>
         {todos.map(function (todo) {
