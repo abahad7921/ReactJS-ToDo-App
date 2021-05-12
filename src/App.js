@@ -1,5 +1,6 @@
 import "./styles.css";
 import React, { useState } from "react";
+import { Button } from "@material-ui/core";
 
 export default function App() {
   const [todos, setTodos] = useState(["Dummy Task"]);
@@ -26,9 +27,15 @@ export default function App() {
           onChange={(event) => setInput(event.target.value)}
           value={input}
         />
-        <button type="submit" onClick={addTodo}>
+
+        <Button
+          type="submit"
+          onClick={addTodo}
+          variant="contained"
+          color="primary"
+        >
           Add Task
-        </button>
+        </Button>
       </form>
       <ul>
         {todos.map(function (todo) {
