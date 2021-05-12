@@ -17,7 +17,6 @@ export default function App() {
       <input placeholder="write a task" onChange={inputChangeHandler}></input>
 
       <button>Add Task</button>
-      <button>Delete Task</button>
       <ul>{<li>{task}</li>}</ul>
     </div>
   );
