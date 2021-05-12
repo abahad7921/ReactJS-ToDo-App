@@ -23,12 +23,19 @@ export default function App() {
       <h2>Start adding your work!</h2>
       <form>
         <input
+          style={{
+            height: "1.8rem",
+            width: "12rem",
+            borderRadius: "6px",
+            borderColor: "#E5E7EB"
+          }}
           placeholder="write a task"
           onChange={(event) => setInput(event.target.value)}
           value={input}
         />
 
         <Button
+          disabled={!input}
           type="submit"
           onClick={addTodo}
           variant="contained"
