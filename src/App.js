@@ -7,7 +7,7 @@ export default function App() {
     setTask(event.target.value);
   }
 
-  const [task, setTask] = useState([]);
+  const [todos, setTodos] = useState(["Dummy Task"]);
 
   return (
     <div className="App">
@@ -17,7 +17,11 @@ export default function App() {
       <input placeholder="write a task" onChange={inputChangeHandler}></input>
 
       <button>Add Task</button>
-      <ul>{<li>{task}</li>}</ul>
+      <ul>
+        {todos.map(function (todo) {
+          return <li>{todo}</li>;
+        })}
+      </ul>
     </div>
   );
 }
