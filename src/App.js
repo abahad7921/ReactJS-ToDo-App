@@ -1,9 +1,9 @@
 import "./styles.css";
 import React, { useState } from "react";
-import { Button } from "@material-ui/core";
+import { Button, FormControl, InputLabel, Input } from "@material-ui/core";
 
 export default function App() {
-  const [todos, setTodos] = useState(["Dummy Task"]);
+  const [todos, setTodos] = useState([""]);
   const [input, setInput] = useState("");
 
   // const addTodo = (event) => {
@@ -22,7 +22,7 @@ export default function App() {
       <h1>React Todo App ✅</h1>
       <h2>Start adding your work!</h2>
       <form>
-        <input
+        {/* <input
           style={{
             height: "1.8rem",
             width: "12rem",
@@ -32,7 +32,16 @@ export default function App() {
           placeholder="write a task"
           onChange={(event) => setInput(event.target.value)}
           value={input}
-        />
+        /> */}
+        {/*formControl is basically input alernative from material ui*/}
+        <FormControl>
+          <InputLabel>Write a task</InputLabel>
+          <Input
+            placeholder="write a task"
+            onChange={(event) => setInput(event.target.value)}
+            value={input}
+          ></Input>
+        </FormControl>
 
         <Button
           disabled={!input}
@@ -44,6 +53,7 @@ export default function App() {
           Add Task
         </Button>
       </form>
+
       <ul>
         {todos.map(function (todo) {
           return <li style={{ listStyle: "none" }}>{todo}</li>;
