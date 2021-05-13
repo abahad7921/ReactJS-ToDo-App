@@ -71,7 +71,7 @@ export default function App() {
           variant="contained"
           color="primary"
         >
-          Delete Task
+          Delete ALL Task
         </Button>
       </form>
 
