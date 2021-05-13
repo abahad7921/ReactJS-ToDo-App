@@ -17,6 +17,19 @@ export default function App() {
     setInput("");
   }
 
+  function deleteTodo() {
+    console.log("delete todo function called");
+    event.preventDefault();
+    //setTodos("");
+    setTodos(
+      todos.filter(function () {
+        todos[0];
+      })
+    );
+    console.log(todos);
+    //setTodos("");
+  }
+
   return (
     <div className="App">
       <h1>React Todo App ✅</h1>
@@ -51,6 +64,14 @@ export default function App() {
           color="primary"
         >
           Add Task
+        </Button>
+        <Button
+          type="submit"
+          onClick={deleteTodo}
+          variant="contained"
+          color="primary"
+        >
+          Delete Task
         </Button>
       </form>
 
