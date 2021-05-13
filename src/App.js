@@ -17,7 +17,7 @@ export default function App() {
     setInput("");
   }
 
-  function deleteTodo() {
+  function deleteAllTodo() {
     console.log("delete todo function called");
     event.preventDefault();
     //setTodos("");
@@ -67,7 +67,7 @@ export default function App() {
         </Button>
         <Button
           type="submit"
-          onClick={deleteTodo}
+          onClick={deleteAllTodo}
           variant="contained"
           color="primary"
         >
